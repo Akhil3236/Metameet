@@ -15,14 +15,6 @@ export default function Dashboard() {
   const [joinroomid,setjoinroomid]=useState("");
 
 
-  // useEffect=()=>{
-
-  //   if(sessionStorage==null){
-
-  //     Navigate("/")
-  //   }
-  // }
-
   const [formdata,setformdata]=useState({
     name:"",
     type:""||"public",

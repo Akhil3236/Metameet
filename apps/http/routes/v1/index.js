@@ -7,7 +7,7 @@ import { User,Room,File,ChatMessage } from "../../db/index.js";
 import jwt from "jsonwebtoken"
 import dotenv from "dotenv";
 import { protect } from "../../middleware/middleware.js";
-import cors from "cors"
+
 
 
 export const v1router=Router();
