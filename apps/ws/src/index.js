@@ -2,9 +2,7 @@ import express from "express"
 import cors from "cors"
 import {Server} from "socket.io"
 import http from  "http"
-import { Socket } from "dgram";
-import { log } from "console";
-// import socket from "../../forntend/src/comp/socket";
+
 
 const app=express();
 app.use(cors());
