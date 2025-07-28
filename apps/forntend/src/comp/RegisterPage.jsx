@@ -30,7 +30,7 @@ export default function RegisterPage() {
     console.log(formdata);
     
     try {
-      const res = await axios.post('http://localhost:3000/api/v1/signup',formdata);
+      const res = await axios.post('https://metameet-1.onrender.com/api/v1/signup',formdata);
       // setUser(res.data.userdata);
 
       console.log(res);

@@ -56,7 +56,13 @@ export default function Dashboard() {
         
         window.alert("please create room or join on room")
       }
-      setrooms(rooms_av.data.rooms); 
+
+      
+      else{
+        
+        setrooms(rooms_av.data.rooms); 
+
+      }
       
       
     }
@@ -66,9 +72,15 @@ export default function Dashboard() {
       
     }
   }
-  const join=async()=>{
 
 
+  const joinnewroom=async(e)=>{
+   
+    
+    
+    console.log("clicked");
+    
+    e.preventDefault();
     const  joinroom=await axios.post("https://metameet-1.onrender.com/api/v1/room/join",{
 
       roomId:`${joinroomid}`,
@@ -78,7 +90,8 @@ export default function Dashboard() {
   {
     withCredentials:true
   })
-    console.log(res);
+    dispaly();
+    setopen(true);
   }
   const submit=async(e)=>{
 
@@ -89,7 +102,7 @@ export default function Dashboard() {
     
     if(formdata!=""){
       
-      const adduser=await axios.post("http://localhost:3000/api/v1/room",formdata,{
+      const adduser=await axios.post("https://metameet-1.onrender.com/api/v1/room",formdata,{
       withCredentials: true
     }) 
       setisopen(false);
@@ -100,18 +113,11 @@ export default function Dashboard() {
 
   }
   
-  
-  // const createrooom=async(res,req)=>{
-    
-  //   const adduser=await axios.post("http://localhost:3000/api/v1/room",{
-  //     withCredentials: true
-  //   }) 
-  // }
 
   const logout=async()=>{
 
 
-    const logoutres=await axios.post("http://localhost:3000/api/v1/logout",{
+    const logoutres=await axios.post("https://metameet-1.onrender.com/api/v1/logout",{
 
       withCredentials:true
 
@@ -144,7 +150,7 @@ export default function Dashboard() {
 
     const roomId=e._id;
 
-    const delteroom=await axios.post("http://localhost:3000/api/v1/room/delete",{roomId},{
+    const delteroom=await axios.post("https://metameet-1.onrender.com/api/v1/room/delete",{roomId},{
 
       withCredentials:true
     })
@@ -201,7 +207,7 @@ export default function Dashboard() {
             <input
             type="text"
             name="theme"
-            placeholder='enter your name :'
+            placeholder='enter your theme :'
             value={formdata.theme}
             onChange={(e)=>setformdata({...formdata,[e.target.name]:e.target.value,})}
             required
@@ -217,7 +223,7 @@ export default function Dashboard() {
                assests : 
                 <input type="text" 
                 name='assests'
-                placeholder='enter your name :'
+                placeholder='enter your assest name :'
                 value={formdata.assests}
                 onChange={(e)=>setformdata({...formdata,[e.target.name]:e.target.value,})}
                 required/>
@@ -236,7 +242,7 @@ export default function Dashboard() {
       {
         open &&(
         
-          <form action="" className='createroomform'>
+          <form onSubmit={joinnewroom} className='createroomform'>
 
              Room Id:
             <label htmlFor="room">
@@ -250,7 +256,7 @@ export default function Dashboard() {
               />
             </label>
 
-          <button onClick={join}>join</button>
+          <button type='submit'>join</button>
 
           <button onClick={close}>close</button>
 
