@@ -15,7 +15,7 @@ app.use(express.json());
 
 const allowed=[
 
-    "https://metameet.digital",
+    "https://www.metameet.digital",
     'http://localhost:5173',
     '*'
 ];
