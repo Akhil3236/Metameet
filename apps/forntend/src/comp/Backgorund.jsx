@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei';
 function Backgorund() {
 
     
-  const { scene } = useGLTF('/public/models/Akhiltuluiri.glb');
+  const { scene } = useGLTF('/models/Akhiltuluiri.glb');
   
   return (
       <primitive
