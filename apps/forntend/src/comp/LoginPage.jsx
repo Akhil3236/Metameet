@@ -15,7 +15,7 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/v1/signin', { email, password },{withCredentials: true});
+      const res = await axios.post('https://metameet-23.onrender.com/api/v1/signin', { email, password },{withCredentials: true});
 
       setUser(res.data.userdata);
       
@@ -51,7 +51,7 @@ export default function LoginPage() {
 
          <div className="deatils">
               
-              <a href="https://www.akhiltuluri.site/Home">about</a>
+              <a href="/">about</a>
               <a href="">contact me</a>
 
 

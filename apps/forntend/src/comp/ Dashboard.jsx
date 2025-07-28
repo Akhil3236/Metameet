@@ -17,13 +17,11 @@ export default function Dashboard() {
 
   // useEffect=()=>{
 
-  //   if(s){
+  //   if(sessionStorage==null){
 
   //     Navigate("/")
   //   }
   // }
-
-  
 
   const [formdata,setformdata]=useState({
     name:"",
@@ -47,7 +45,7 @@ export default function Dashboard() {
   const dispaly=async()=>{      
     try{
       
-      const rooms_av=await axios.get("http://localhost:3000/api/v1/room",{
+      const rooms_av=await axios.get("https://metameet-23.onrender.com/api/v1/signin",{
         
         withCredentials: true
         
