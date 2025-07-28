@@ -13,8 +13,14 @@ dotenv.config();
 app.use(cookieParser());     
 app.use(express.json());
 
+const allowed=[
+
+    "https://metameet.digital",
+    'http://localhost:5173',
+    '*'
+];
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: allowed,
   credentials: true              
 }));
 
