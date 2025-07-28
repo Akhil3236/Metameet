@@ -45,7 +45,7 @@ export default function Dashboard() {
   const dispaly=async()=>{      
     try{
       
-      const rooms_av=await axios.get("https://metameet-23.onrender.com/api/v1/signin",{
+      const rooms_av=await axios.get("https://metameet-1.onrender.com/api/v1/room",{
         
         withCredentials: true
         
@@ -69,7 +69,7 @@ export default function Dashboard() {
   const join=async()=>{
 
 
-    const  joinroom=await axios.post("http://localhost:3000/api/v1/room/join",{
+    const  joinroom=await axios.post("https://metameet-1.onrender.com/api/v1/room/join",{
 
       roomId:`${joinroomid}`,
       userId:user._id

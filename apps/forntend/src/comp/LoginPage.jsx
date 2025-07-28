@@ -15,7 +15,7 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://metameet-23.onrender.com/api/v1/signin', { email, password },{withCredentials: true});
+      const res = await axios.post('https://metameet-1.onrender.com/api/v1/signin', { email, password },{withCredentials: true});
 
       setUser(res.data.userdata);
       
