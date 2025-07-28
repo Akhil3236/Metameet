@@ -8,7 +8,7 @@ import Backgorund from './Backgorund';
 import ClassChatPopup from './class.jsx';
 import { getZoneFromCoords } from '../comp/Zone.js';
 import DrawingBoard from './DrawingBoard.jsx';
-import Red from './red.jsx';
+import Red from './Red.jsx';
 import Game from './Game.jsx';
 import socket from './socket.js';
 import VideoMeet from './VideoMeet.jsx';
