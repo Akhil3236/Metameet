@@ -21,8 +21,7 @@ const allowed=[
 ];
 app.use(cors({
   origin: allowed,
-  credentials: true  ,
-  allowedHeaders: ['Content-Type', 'Authorization'],            
+  credentials: true ,           
 }));
 
 

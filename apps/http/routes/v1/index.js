@@ -64,7 +64,7 @@ v1router.post("/signin",async(req,res)=>{
             const token=generateToken(user._id)                 
             res.cookie('token',token,{
                 httpOnly:true,
-                secure:process.env.NODE_ENV==="Production",
+                secure:true,
                 sameSite:"none",
                 maxAge:24*60*60*1000
             })
