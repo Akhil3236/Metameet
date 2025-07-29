@@ -5,7 +5,7 @@ MetaMeet is a real-time **metaverse collaboration platform** where users can int
 
 
 
-[live](MetaMeet.digital)
+[live](https://www.metameet.digital)
 
 ---
 
