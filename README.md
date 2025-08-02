@@ -13,7 +13,7 @@ MetaMeet is a real-time **metaverse collaboration platform** where users can int
 
 - 🔗 **Joinable Rooms** with unique Room ID's
 - 👤 Real-time **avatars** with live movement updates
-- 💬 **Chat** system (global and room-based)
+- 💬 **Chat** system (global and also room-based)
 - 🧠 Mini-games:
 - 📁 **File sharing** support (images, documents)
 - auidio and video calls support
